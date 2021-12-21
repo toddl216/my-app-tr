@@ -4,7 +4,9 @@ import styled from "styled-components";
 //import { useNavigate } from 'react-router-dom'
 //import { useDispatch, useSelector } from 'react-redux'
 //import { createUserName } from "../redux/modules/user";
-import cover from "./img/img.png";
+import cover from "./img/img1.png";
+
+const ans = '1234'
 
 const Main = () => {
   /*
@@ -43,6 +45,13 @@ const Main = () => {
       answerInput.current.focus()
       return
     }
+
+    const check_ans = (a) => {
+      alert('The answer is ' + String(a === ans))
+      return (a === ans)
+    }
+
+    return check_ans(answer)
     /*
     if (checkExistName()) {
       alert('이미 사용된 이름이에요! 다른 이름을 입력해주세요 :)')
